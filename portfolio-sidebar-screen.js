@@ -34,7 +34,7 @@ export class PortfolioSidebarScreen extends DDDSuper(I18NMixin(LitElement)) {
         "/../",
       locales: ["ar", "es", "hi", "zh"],
     });
-  }
+   }
 
   // Lit reactive properties
   static get properties() {

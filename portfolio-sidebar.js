@@ -104,7 +104,7 @@ export class PortfolioSidebar extends DDDSuper(I18NMixin(LitElement)) {
         <slot></slot>
       </div>
     </div>`;
-  }
+   }
 
   /**
    * haxProperties integration via file reference
