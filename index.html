@@ -1,50 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <base href="/" />
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
-    <meta
-      name="Description"
-      content="Demonstration for portfolio-sidebar-themes"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <title>Matt Logan | Digital Portfolio</title>
+  <script type="module" src="./portfolio-sidebar-themes.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #f7f9fc;
+    }
+    portfolio-sidebar-screen {
+      padding: 20px;
+      box-sizing: border-box;
+      margin-left: 270px;
+    }
+    img.profile {
+      width: 200px;
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+    ul {
+      line-height: 1.6;
+    }
+    img.project-img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <portfolio-sidebar-themes>
+    <portfolio-sidebar-screen title="Home Page" pagenumber="0" bgColor="#ffffff">
+      <div style="color: black;">
+        <h1>Hello my Name is Matt Logan</h1>
+        <p>This is a page dedicated to learning more about me </p>
+        <img class="profile" src="https://media.licdn.com/dms/image/v2/D4E03AQFxsdZ-yZ-0jA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1695178875863?e=1752105600&v=beta&t=MhOdPUhWONPKrs_9PnT0iAJ8fTeVByVv9Q0k4-2v1Vw" alt="Matt Logan Professional Picture">
+      </div>
+    </portfolio-sidebar-screen>
 
-    <style>
-      :root,
-      html,
-      body {
-        margin: var(--ddd-spacing-0);
-        padding: var(--ddd-spacing-0);
-      }
-      #demo {
-        margin: var(--ddd-spacing-2);
-      }
+    <portfolio-sidebar-screen title="About Me" pagenumber="1" bgColor="#e3f2fd">
+      <div style="color: black;">
+        <h2>Home Page</h2>
+        <p>
+          I'm from Lancaster Pennsylvania and I enjoy hanging out with friends and playing sports.
+          I am a sophomore student that came to Penn State to get a bachelor's 
+          degree in cybersecurity.  
+        </p>
+      </div>
+    </portfolio-sidebar-screen>
 
-      #example {
-        --portfolio-sidebar-themes-font-size: var(--ddd-font-size-l);
-        background-color: var(--ddd-accent-2);
-        color: var(--ddd-primary-17);
-      }
-    </style>
-    <title>portfolio-sidebar-themes</title>
-  </head>
+    <portfolio-sidebar-screen title="Projects" pagenumber="2" bgColor="#ffffff">
+      <div style="color: black;">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li>
+            <strong>Javascript</strong>
+            <br> 
+          </li>
+          <li>
+            <strong>Wireshark</strong>
+            <br>
+            <li>
+              <strong>My SQL</strong>
+              <br>
+          </li>
+          <li>
+            <strong>Python</strong>
+            <br>
+        </ul>
+      </div>
+    </portfolio-sidebar-screen>
 
-  <body>
-    <div id="demo">
-      <!-- this is going to do whatever the tag's defaults are -->
-      <portfolio-sidebar-themes title="example"></portfolio-sidebar-themes>
-      <portfolio-sidebar-screen>
-        <div slot="screen" sid="0" title="Intro">
-          Welcome to the Intro Screen
-        </div>
-        <div slot="screen" sid="1" title="Home">This is the Home Screen</div>
-        <div slot="screen" sid="2" title="About">Learn more About Us</div>
-        <div slot="screen" sid="3" title="Contact">Get in Touch</div>
-      </portfolio-sidebar-screen>
-    </div>
-    <script type="module" src="./portfolio-sidebar-themes.js"></script>
-  </body>
-</html> 
+    <portfolio-sidebar-screen title="Skills" pagenumber="3" bgColor="#e3f2fd">
+      <div style="color: black;">
+        <h2>Work Experience / Involvement</h2>
+        <ul>
+          <li>Lead Dishwasher</li>
+          <li>Server</li>
+          <li>IST Diplomat</li>
+          <li>Boy Scout</li>
+          <li>Member of Business Fraternity Delta Sigma Pi</li>
+        </ul>
+      </div>
+    </portfolio-sidebar-screen>
+
+    <portfolio-sidebar-screen title="Contact" pagenumber="4" bgColor="#ffffff">
+      <div style="color: black;">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:matthewsterlinglogan@gmail.com">matthewsterlinglogan@gmail.com</a></p>
+        <p>
+          LinkedIn: <a href="https://www.linkedin.com/in/matthew-s-logan" target="_blank">www.linkedin.com/in/matthew-s-logan</a><br></p>
+        <p>
+          Github:  <a href="https://github.com/MattSLogan" target="_blank">github-MattSLogan</a></p> 
+        </p>
+      </div>
+    </portfolio-sidebar-screen>
+  </portfolio-sidebar-themes>
+</body>
+</html>
